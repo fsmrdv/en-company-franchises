@@ -22,6 +22,16 @@
     color: var(--fg);
     background: var(--bg);
   }
+  .site-nav {
+    display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+    padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--card);
+  }
+  .site-nav a {
+    color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid transparent;
+  }
+  .site-nav a.active { color: #fff; background: #1f4d3a; }
+  .site-nav a:not(.active):hover { background: #efece6; }
   main { max-width: 1100px; margin: 0 auto; padding: 28px 18px 64px; }
   h1 { font-size: 28px; letter-spacing: -0.03em; margin: 0 0 6px; }
   h2 { font-size: 18px; margin: 28px 0 10px; }
@@ -67,6 +77,10 @@
 </style>
 </head>
 <body>
+<nav class="site-nav">
+  <a class="active" href="./">Компании</a>
+  <a href="./letter.html">Письмо GAME OVER</a>
+</nav>
 <main>
   <h1>Франшизы компаний</h1>
   <p class="sub">Бренд из названия компании минус город · 2+ профиля в 2+ городах · контакты из prod · 2026-08-20</p>
